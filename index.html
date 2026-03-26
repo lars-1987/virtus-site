@@ -154,6 +154,85 @@
             white-space: nowrap;
         }
 
+        /* ---- SCREENSHOT CAROUSEL ---- */
+        .screenshots {
+            position: relative;
+            padding: 0 0 120px;
+            overflow: hidden;
+        }
+
+        .screenshots::before,
+        .screenshots::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 180px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .screenshots::before {
+            left: 0;
+            background: linear-gradient(to right, var(--bg-primary), transparent);
+        }
+
+        .screenshots::after {
+            right: 0;
+            background: linear-gradient(to left, var(--bg-primary), transparent);
+        }
+
+        .screenshots-track {
+            display: flex;
+            gap: 24px;
+            width: max-content;
+            animation: scroll-left 40s linear infinite;
+        }
+
+        .screenshots-track:hover {
+            animation-play-state: paused;
+        }
+
+        .screenshot-item {
+            flex-shrink: 0;
+            width: 220px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-secondary);
+        }
+
+        .screenshot-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @media (max-width: 768px) {
+            .screenshot-item {
+                width: 170px;
+                border-radius: 12px;
+            }
+
+            .screenshots {
+                padding: 0 0 80px;
+            }
+
+            .screenshots::before,
+            .screenshots::after {
+                width: 60px;
+            }
+
+            .screenshots-track {
+                gap: 16px;
+                animation-duration: 30s;
+            }
+        }
+
         /* ---- FEATURES ---- */
         .features {
             padding: 120px 24px;
@@ -385,6 +464,23 @@
             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
         </a>
         <p class="hero-quote">We suffer more often in imagination than in reality.</p>
+    </section>
+
+    <section class="screenshots">
+        <div class="screenshots-track">
+            <div class="screenshot-item"><img src="Screenshots/screen-1.png" alt="One passage. Every morning."></div>
+            <div class="screenshot-item"><img src="Screenshots/screen-2.png" alt="Personalized to your path."></div>
+            <div class="screenshot-item"><img src="Screenshots/screen-3.png" alt="Reflect. Write. Grow."></div>
+            <div class="screenshot-item"><img src="Screenshots/screen-4.png" alt="Build the habit."></div>
+            <div class="screenshot-item"><img src="Screenshots/screen-5.png" alt="Your Personal Library."></div>
+            <div class="screenshot-item"><img src="Screenshots/screen-6.png" alt="Virtus app"></div>
+            <div class="screenshot-item"><img src="Screenshots/screen-1.png" alt="One passage. Every morning."></div>
+            <div class="screenshot-item"><img src="Screenshots/screen-2.png" alt="Personalized to your path."></div>
+            <div class="screenshot-item"><img src="Screenshots/screen-3.png" alt="Reflect. Write. Grow."></div>
+            <div class="screenshot-item"><img src="Screenshots/screen-4.png" alt="Build the habit."></div>
+            <div class="screenshot-item"><img src="Screenshots/screen-5.png" alt="Your Personal Library."></div>
+            <div class="screenshot-item"><img src="Screenshots/screen-6.png" alt="Virtus app"></div>
+        </div>
     </section>
 
     <section class="features">
