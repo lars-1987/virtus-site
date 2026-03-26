@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #0A0A0A;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtus — Ancient wisdom for modern struggles</title>
+    <meta name="description" content="2,000 years of Stoic philosophy. One daily practice. Curated passages from Marcus Aurelius, Seneca, and Epictetus with guided journaling.">
+    <meta property="og:title" content="Virtus — Ancient wisdom for modern struggles">
+    <meta property="og:description" content="2,000 years of Stoic philosophy. One daily practice. Curated passages from Marcus Aurelius, Seneca, and Epictetus with guided journaling.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://getvirtus.app">
+    <meta property="og:image" content="https://getvirtus.app/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0A0A0A;
+            --bg-secondary: #141414;
+            --bg-tertiary: #1C1C1E;
+            --text-primary: #F5F5F7;
+            --text-secondary: #8E8E93;
+            --text-tertiary: #48484A;
+            --accent-primary: #6E6EFF;
+            --accent-secondary: #4A4A8A;
+            --border-primary: #1C1C1E;
+            --border-secondary: #2C2C2E;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--bg-primary);
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--text-primary);
+        }
+
+        /* ---- NAV ---- */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 40px;
+            background-color: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .nav-wordmark {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.15em;
+            color: var(--text-primary);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: var(--text-secondary);
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* ---- HERO ---- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 24px 80px;
+            position: relative;
+        }
+
+        .hero-headline {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: clamp(36px, 5vw, 60px);
+            line-height: 1.25;
+            color: var(--text-primary);
+            max-width: 720px;
+            margin-bottom: 24px;
+        }
+
+        .hero-headline .accent {
+            color: var(--accent-primary);
+        }
+
+        .hero-subtitle {
+            font-size: 17px;
+            color: var(--text-secondary);
+            margin-bottom: 48px;
+            letter-spacing: 0.01em;
+        }
+
+        .app-store-badge {
+            display: inline-block;
+            margin-bottom: 0;
+        }
+
+        .app-store-badge img {
+            height: 48px;
+            display: block;
+        }
+
+        .hero-quote {
+            position: absolute;
+            bottom: 48px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-style: italic;
+            font-size: 14px;
+            color: var(--text-tertiary);
+            white-space: nowrap;
+        }
+
+        /* ---- FEATURES ---- */
+        .features {
+            padding: 120px 24px;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .section-heading {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 64px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background-color: var(--border-primary);
+            border: 1px solid var(--border-primary);
+        }
+
+        .feature-card {
+            background-color: var(--bg-primary);
+            padding: 48px 40px;
+        }
+
+        .feature-title {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .feature-desc {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        /* ---- QUOTE ---- */
+        .quote-section {
+            padding: 120px 24px;
+            text-align: center;
+        }
+
+        .quote-text {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: clamp(24px, 3.5vw, 40px);
+            line-height: 1.4;
+            color: var(--text-primary);
+            max-width: 680px;
+            margin: 0 auto 24px;
+        }
+
+        .quote-attr {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 15px;
+            color: var(--text-secondary);
+            letter-spacing: 0.02em;
+        }
+
+        /* ---- PRICING ---- */
+        .pricing {
+            padding: 120px 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            background-color: var(--border-primary);
+            border: 1px solid var(--border-primary);
+        }
+
+        .pricing-card {
+            background-color: var(--bg-primary);
+            padding: 48px 40px;
+        }
+
+        .pricing-tier {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .pricing-price {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 28px;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .pricing-badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent-primary);
+            border: 1px solid var(--accent-primary);
+            padding: 3px 8px;
+            margin-left: 12px;
+            vertical-align: middle;
+            border-radius: 2px;
+        }
+
+        .pricing-desc {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .pricing-alt {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            margin-top: 16px;
+        }
+
+        /* ---- FOOTER ---- */
+        .footer {
+            padding: 80px 24px;
+            text-align: center;
+            border-top: 1px solid var(--border-primary);
+        }
+
+        .footer-location {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            font-size: 14px;
+            color: var(--text-tertiary);
+        }
+
+        .footer-links a:hover {
+            color: var(--text-secondary);
+        }
+
+        .footer-copy {
+            font-size: 13px;
+            color: var(--text-tertiary);
+        }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 768px) {
+            .nav {
+                padding: 20px 24px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .hero {
+                padding: 100px 24px 100px;
+            }
+
+            .hero-quote {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                transform: none;
+                margin-top: 80px;
+                white-space: normal;
+                max-width: 320px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card {
+                padding: 40px 32px;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card {
+                padding: 40px 32px;
+            }
+
+            .features,
+            .quote-section,
+            .pricing {
+                padding: 80px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <span class="nav-wordmark">VIRTUS</span>
+        <div class="nav-links">
+            <a href="/privacy.html">Privacy</a>
+            <a href="/tou.html">Terms</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero-headline">Ancient wisdom for <span class="accent">modern struggles</span></h1>
+        <p class="hero-subtitle">2,000 years of philosophy. One daily practice.</p>
+        <a class="app-store-badge" href="#" aria-label="Download on the App Store">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
+        </a>
+        <p class="hero-quote">We suffer more often in imagination than in reality.</p>
+    </section>
+
+    <section class="features">
+        <h2 class="section-heading">Your daily practice</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3 class="feature-title">Curated wisdom</h3>
+                <p class="feature-desc">Passages from Marcus Aurelius, Seneca, and Epictetus, selected and organised by theme.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-title">Guided reflection</h3>
+                <p class="feature-desc">Every passage comes with a journaling prompt. Specific. Actionable. Not vague.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-title">Built-in accountability</h3>
+                <p class="feature-desc">Streak tracking and a private journal that stays on your device.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <blockquote class="quote-text">"No man is free who is not master of himself."</blockquote>
+        <p class="quote-attr">-- Epictetus</p>
+    </section>
+
+    <section class="pricing">
+        <h2 class="section-heading">Simple pricing</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <p class="pricing-tier">Free</p>
+                <p class="pricing-price">One daily passage</p>
+                <p class="pricing-desc">Start your practice with a free daily quote.</p>
+            </div>
+            <div class="pricing-card">
+                <p class="pricing-tier">Pro</p>
+                <p class="pricing-price">$29.99/year<span class="pricing-badge">Best value</span></p>
+                <p class="pricing-desc">Unlimited wisdom, private journaling, streak tracking, full library. 7-day free trial.</p>
+                <p class="pricing-alt">$4.99/month also available</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-location">Built in Melbourne, Australia</p>
+        <div class="footer-links">
+            <a href="/privacy.html">Privacy</a>
+            <span style="color: var(--text-tertiary);">&middot;</span>
+            <a href="/tou.html">Terms</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Lars Holmstr&ouml;m</p>
+    </footer>
+
+</body>
+</html>

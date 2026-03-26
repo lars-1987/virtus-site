@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #0A0A0A;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Virtus</title>
+    <meta name="description" content="Virtus privacy policy. We don't collect your data.">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0A0A0A;
+            --bg-secondary: #141414;
+            --bg-tertiary: #1C1C1E;
+            --text-primary: #F5F5F7;
+            --text-secondary: #8E8E93;
+            --text-tertiary: #48484A;
+            --accent-primary: #6E6EFF;
+            --accent-secondary: #4A4A8A;
+            --border-primary: #1C1C1E;
+            --border-secondary: #2C2C2E;
+        }
+
+        html {
+            background-color: var(--bg-primary);
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 40px;
+            background-color: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .nav-wordmark {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.15em;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: var(--text-secondary);
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .content {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 140px 24px 120px;
+        }
+
+        .content h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 32px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .content .effective-date {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            margin-bottom: 48px;
+        }
+
+        .content h2 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            color: var(--text-primary);
+            margin-top: 48px;
+            margin-bottom: 16px;
+        }
+
+        .content p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 16px;
+        }
+
+        .content ul li {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 4px;
+        }
+
+        .content ul li::before {
+            content: "\2014";
+            position: absolute;
+            left: 0;
+            color: var(--text-tertiary);
+        }
+
+        .content a {
+            color: var(--accent-primary);
+        }
+
+        .content a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer {
+            padding: 80px 24px;
+            text-align: center;
+            border-top: 1px solid var(--border-primary);
+        }
+
+        .footer-location {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            font-size: 14px;
+            color: var(--text-tertiary);
+        }
+
+        .footer-links a:hover {
+            color: var(--text-secondary);
+        }
+
+        .footer-copy {
+            font-size: 13px;
+            color: var(--text-tertiary);
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 20px 24px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .content {
+                padding: 120px 24px 80px;
+            }
+
+            .content h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="/" class="nav-wordmark">VIRTUS</a>
+        <div class="nav-links">
+            <a href="/privacy.html">Privacy</a>
+            <a href="/tou.html">Terms</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <h1>Privacy Policy</h1>
+        <p class="effective-date">Effective date: March 26, 2026</p>
+
+        <p>Virtus ("the App") is developed and operated by Lars Holmstr&ouml;m ("we", "us", "our"). This privacy policy describes how we handle your information when you use Virtus.</p>
+
+        <h2>The short version</h2>
+        <p>We don't collect your data. Your journal entries, preferences, and usage data stay on your device. We don't have accounts, we don't have servers, and we don't track you.</p>
+
+        <h2>Information we do not collect</h2>
+        <p>Virtus does not collect, store, or transmit any personal information. Specifically:</p>
+        <ul>
+            <li>We do not require account creation or sign-in.</li>
+            <li>We do not collect your name, email address, or any contact information.</li>
+            <li>We do not access your contacts, photos, camera, microphone, or location.</li>
+            <li>We do not use cookies or tracking technologies.</li>
+            <li>We do not serve advertisements.</li>
+            <li>We do not share any information with third parties.</li>
+        </ul>
+
+        <h2>Data stored on your device</h2>
+        <p>Virtus stores the following data locally on your device:</p>
+        <ul>
+            <li>Your onboarding preferences (selected themes, notification time, display name)</li>
+            <li>Journal entries you write</li>
+            <li>Streak and progress data</li>
+            <li>Bookmarked passages</li>
+            <li>App settings (appearance, reminder time)</li>
+        </ul>
+        <p>This data is stored using your device's local storage. It is never transmitted to any server. We cannot access, read, or recover this data. If you delete the app, this data is permanently removed.</p>
+
+        <h2>Subscriptions</h2>
+        <p>Virtus Pro subscriptions are processed entirely by Apple through the App Store. We use RevenueCat to manage subscription status. RevenueCat receives anonymised transaction data from Apple to verify your subscription status. We do not receive your payment information, Apple ID, or any personally identifiable information through this process. RevenueCat's privacy policy is available at <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
+
+        <h2>Analytics</h2>
+        <p>Virtus uses PostHog in cookieless mode for anonymous, aggregated usage analytics. This means:</p>
+        <ul>
+            <li>No cookies are set on your device.</li>
+            <li>No personally identifiable information is collected.</li>
+            <li>We see anonymous, aggregate data about how the app is used (for example, how many users complete onboarding), not individual user behaviour.</li>
+            <li>No data is shared with advertisers or third parties.</li>
+        </ul>
+        <p>PostHog's privacy policy is available at <a href="https://posthog.com/privacy">posthog.com/privacy</a>.</p>
+
+        <h2>Children's privacy</h2>
+        <p>Virtus is not directed at children under the age of 13. We do not knowingly collect any information from children.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated effective date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+        <h2>Contact</h2>
+        <p>If you have questions about this privacy policy, contact us at <a href="mailto:hello@getvirtus.app">hello@getvirtus.app</a>.</p>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-location">Built in Melbourne, Australia</p>
+        <div class="footer-links">
+            <a href="/privacy.html">Privacy</a>
+            <span style="color: var(--text-tertiary);">&middot;</span>
+            <a href="/tou.html">Terms</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Lars Holmstr&ouml;m</p>
+    </footer>
+
+</body>
+</html>

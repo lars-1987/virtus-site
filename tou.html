@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #0A0A0A;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use — Virtus</title>
+    <meta name="description" content="Virtus terms of use. Read the terms governing your use of the Virtus app.">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0A0A0A;
+            --bg-secondary: #141414;
+            --bg-tertiary: #1C1C1E;
+            --text-primary: #F5F5F7;
+            --text-secondary: #8E8E93;
+            --text-tertiary: #48484A;
+            --accent-primary: #6E6EFF;
+            --accent-secondary: #4A4A8A;
+            --border-primary: #1C1C1E;
+            --border-secondary: #2C2C2E;
+        }
+
+        html {
+            background-color: var(--bg-primary);
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 40px;
+            background-color: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .nav-wordmark {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.15em;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: var(--text-secondary);
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .content {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 140px 24px 120px;
+        }
+
+        .content h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 32px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .content .effective-date {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            margin-bottom: 48px;
+        }
+
+        .content h2 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            color: var(--text-primary);
+            margin-top: 48px;
+            margin-bottom: 16px;
+        }
+
+        .content p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 16px;
+        }
+
+        .content ul li {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 4px;
+        }
+
+        .content ul li::before {
+            content: "\2014";
+            position: absolute;
+            left: 0;
+            color: var(--text-tertiary);
+        }
+
+        .content a {
+            color: var(--accent-primary);
+        }
+
+        .content a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer {
+            padding: 80px 24px;
+            text-align: center;
+            border-top: 1px solid var(--border-primary);
+        }
+
+        .footer-location {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            font-size: 14px;
+            color: var(--text-tertiary);
+        }
+
+        .footer-links a:hover {
+            color: var(--text-secondary);
+        }
+
+        .footer-copy {
+            font-size: 13px;
+            color: var(--text-tertiary);
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 20px 24px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .content {
+                padding: 120px 24px 80px;
+            }
+
+            .content h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="/" class="nav-wordmark">VIRTUS</a>
+        <div class="nav-links">
+            <a href="/privacy.html">Privacy</a>
+            <a href="/tou.html">Terms</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <h1>Terms of Use</h1>
+        <p class="effective-date">Effective date: March 26, 2026</p>
+
+        <p>These Terms of Use ("Terms") govern your use of Virtus ("the App"), developed and operated by Lars Holmstr&ouml;m ("we", "us", "our"). By downloading or using the App, you agree to these Terms.</p>
+
+        <h2>Use of the App</h2>
+        <p>Virtus is a daily Stoic wisdom and journaling application. You may use the App for personal, non-commercial purposes. You agree not to:</p>
+        <ul>
+            <li>Reproduce, distribute, or republish the App's content in any commercial product or service.</li>
+            <li>Reverse engineer, decompile, or disassemble the App.</li>
+            <li>Use the App for any unlawful purpose.</li>
+            <li>Attempt to gain unauthorised access to any part of the App or its systems.</li>
+        </ul>
+
+        <h2>Content</h2>
+        <p>The Stoic passages included in Virtus are sourced from public domain translations of classical texts by Marcus Aurelius, Seneca, and Epictetus. The journaling prompts, curation, organisation, and all original written content are the intellectual property of Lars Holmstr&ouml;m.</p>
+        <p>You retain full ownership of any journal entries or personal content you create within the App. This content is stored locally on your device and is not accessible to us.</p>
+
+        <h2>Subscriptions</h2>
+        <p>Virtus offers optional paid subscriptions ("Virtus Pro") that unlock additional features. Subscriptions are processed and managed by Apple through the App Store.</p>
+        <ul>
+            <li>Payment is charged to your Apple ID account upon confirmation of purchase.</li>
+            <li>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing period.</li>
+            <li>Your account will be charged for renewal within 24 hours prior to the end of the current period.</li>
+            <li>You can manage and cancel your subscriptions by going to your Account Settings in the App Store after purchase.</li>
+            <li>Any unused portion of a free trial period will be forfeited when you purchase a subscription.</li>
+        </ul>
+        <p>Subscription prices:</p>
+        <ul>
+            <li>Monthly: $4.99 USD per month</li>
+            <li>Annual: $29.99 USD per year (includes 7-day free trial)</li>
+        </ul>
+        <p>Prices may vary by region and are subject to change. Any price changes will apply to subsequent billing periods, not the current one.</p>
+
+        <h2>Free trial</h2>
+        <p>The annual subscription includes a 7-day free trial. You will not be charged during the trial period. If you do not cancel before the trial ends, your subscription will automatically convert to a paid subscription and your Apple ID account will be charged.</p>
+
+        <h2>Refunds</h2>
+        <p>Refunds are handled by Apple in accordance with their App Store policies. To request a refund, visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
+        <h2>Disclaimers</h2>
+        <p>The content in Virtus is provided for personal reflection and educational purposes only. It is not a substitute for professional medical, psychological, or therapeutic advice. If you are experiencing a mental health crisis, please contact a qualified professional or your local emergency services.</p>
+        <p>The App is provided "as is" without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+
+        <h2>Limitation of liability</h2>
+        <p>To the maximum extent permitted by law, Lars Holmstr&ouml;m shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the App, including but not limited to loss of data, loss of profits, or business interruption.</p>
+        <p>Since all data is stored locally on your device, we cannot recover journal entries or other content if you delete the App or lose your device. You are responsible for maintaining any backups you consider necessary.</p>
+
+        <h2>Changes to these Terms</h2>
+        <p>We may update these Terms from time to time. Any changes will be posted on this page with an updated effective date. Continued use of the App after changes constitutes acceptance of the updated Terms.</p>
+
+        <h2>Governing law</h2>
+        <p>These Terms are governed by and construed in accordance with the laws of the State of Victoria, Australia, without regard to conflict of law principles.</p>
+
+        <h2>Contact</h2>
+        <p>If you have questions about these Terms, contact us at <a href="mailto:hello@getvirtus.app">hello@getvirtus.app</a>.</p>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-location">Built in Melbourne, Australia</p>
+        <div class="footer-links">
+            <a href="/privacy.html">Privacy</a>
+            <span style="color: var(--text-tertiary);">&middot;</span>
+            <a href="/tou.html">Terms</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Lars Holmstr&ouml;m</p>
+    </footer>
+
+</body>
+</html>
