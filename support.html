@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Virtus</title>
-    <meta name="description" content="Virtus privacy policy. We don't collect your data.">
+    <title>Support — Virtus</title>
+    <meta name="description" content="Get help with Virtus. Reach out and we'll get back to you.">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,56 +105,72 @@
             margin-bottom: 8px;
         }
 
-        .content .effective-date {
-            font-size: 14px;
-            color: var(--text-tertiary);
+        .content .subtitle {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
             margin-bottom: 48px;
         }
 
-        .content h2 {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 500;
-            font-size: 18px;
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            letter-spacing: 0.02em;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 15px;
             color: var(--text-primary);
-            margin-top: 48px;
-            margin-bottom: 16px;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-secondary);
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.2s;
         }
 
-        .content p {
-            font-size: 15px;
-            line-height: 1.7;
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-        }
-
-        .content ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 16px;
-        }
-
-        .content ul li {
-            font-size: 15px;
-            line-height: 1.7;
-            color: var(--text-secondary);
-            padding-left: 20px;
-            position: relative;
-            margin-bottom: 4px;
-        }
-
-        .content ul li::before {
-            content: "\2014";
-            position: absolute;
-            left: 0;
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
             color: var(--text-tertiary);
         }
 
-        .content a {
-            color: var(--accent-primary);
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent-primary);
         }
 
-        .content a:hover {
+        .form-group textarea {
+            resize: vertical;
+            min-height: 160px;
+            line-height: 1.6;
+        }
+
+        .submit-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 15px;
+            font-weight: 500;
             color: var(--text-primary);
+            background-color: var(--accent-primary);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            letter-spacing: 0.02em;
+            transition: opacity 0.2s;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.85;
         }
 
         .footer {
@@ -220,57 +236,24 @@
     </nav>
 
     <main class="content">
-        <h1>Privacy Policy</h1>
-        <p class="effective-date">Effective date: March 26, 2026</p>
+        <h1>Support</h1>
+        <p class="subtitle">Have a question, found a bug, or just want to say hello? Fill out the form below and we'll get back to you.</p>
 
-        <p>Virtus ("the App") is developed and operated by Lars Holmstr&ouml;m ("we", "us", "our"). This privacy policy describes how we handle your information when you use Virtus.</p>
-
-        <h2>The short version</h2>
-        <p>We don't collect your data. Your journal entries, preferences, and usage data stay on your device. We don't have accounts, we don't have servers, and we don't track you.</p>
-
-        <h2>Information we do not collect</h2>
-        <p>Virtus does not collect, store, or transmit any personal information. Specifically:</p>
-        <ul>
-            <li>We do not require account creation or sign-in.</li>
-            <li>We do not collect your name, email address, or any contact information.</li>
-            <li>We do not access your contacts, photos, camera, microphone, or location.</li>
-            <li>We do not use cookies or tracking technologies.</li>
-            <li>We do not serve advertisements.</li>
-            <li>We do not share any information with third parties.</li>
-        </ul>
-
-        <h2>Data stored on your device</h2>
-        <p>Virtus stores the following data locally on your device:</p>
-        <ul>
-            <li>Your onboarding preferences (selected themes, notification time, display name)</li>
-            <li>Journal entries you write</li>
-            <li>Streak and progress data</li>
-            <li>Bookmarked passages</li>
-            <li>App settings (appearance, reminder time)</li>
-        </ul>
-        <p>This data is stored using your device's local storage. It is never transmitted to any server. We cannot access, read, or recover this data. If you delete the app, this data is permanently removed.</p>
-
-        <h2>Subscriptions</h2>
-        <p>Virtus Pro subscriptions are processed entirely by Apple through the App Store. We use RevenueCat to manage subscription status. RevenueCat receives anonymised transaction data from Apple to verify your subscription status. We do not receive your payment information, Apple ID, or any personally identifiable information through this process. RevenueCat's privacy policy is available at <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
-
-        <h2>Analytics</h2>
-        <p>Virtus uses PostHog in cookieless mode for anonymous, aggregated usage analytics. This means:</p>
-        <ul>
-            <li>No cookies are set on your device.</li>
-            <li>No personally identifiable information is collected.</li>
-            <li>We see anonymous, aggregate data about how the app is used (for example, how many users complete onboarding), not individual user behaviour.</li>
-            <li>No data is shared with advertisers or third parties.</li>
-        </ul>
-        <p>PostHog's privacy policy is available at <a href="https://posthog.com/privacy">posthog.com/privacy</a>.</p>
-
-        <h2>Children's privacy</h2>
-        <p>Virtus is not directed at children under the age of 13. We do not knowingly collect any information from children.</p>
-
-        <h2>Changes to this policy</h2>
-        <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated effective date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
-
-        <h2>Contact</h2>
-        <p>If you have questions about this privacy policy, contact us at <a href="mailto:hello@getvirtus.app">hello@getvirtus.app</a>.</p>
+        <form id="support-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send message</button>
+        </form>
     </main>
 
     <footer class="footer">
@@ -284,6 +267,18 @@
         </div>
         <p class="footer-copy">&copy; 2026 Lars Holmstr&ouml;m</p>
     </footer>
+
+    <script>
+        document.getElementById('support-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            var subject = encodeURIComponent('Support request from ' + name);
+            var body = encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message);
+            window.location.href = 'mailto:hello@getvirtus.app?subject=' + subject + '&body=' + body;
+        });
+    </script>
 
 </body>
 </html>
