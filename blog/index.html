@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support — Virtus</title>
-    <meta name="description" content="Get help with Virtus. Reach out and we'll get back to you.">
+    <title>Writing — Virtus</title>
+    <meta name="description" content="Essays on Stoic philosophy, daily practice, and the work of living well. From the makers of Virtus.">
+    <meta property="og:title" content="Writing — Virtus">
+    <meta property="og:description" content="Essays on Stoic philosophy, daily practice, and the work of living well.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://getvirtus.app/blog/">
+    <meta property="og:image" content="https://getvirtus.app/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://getvirtus.app/blog/">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +38,7 @@
         }
 
         html {
+            scroll-behavior: smooth;
             background-color: var(--bg-primary);
         }
 
@@ -51,6 +59,7 @@
             color: var(--text-primary);
         }
 
+        /* ---- NAV ---- */
         .nav {
             position: fixed;
             top: 0;
@@ -73,7 +82,6 @@
             letter-spacing: 0.15em;
             color: var(--text-primary);
             text-transform: uppercase;
-            text-decoration: none;
         }
 
         .nav-links {
@@ -91,88 +99,110 @@
             color: var(--text-primary);
         }
 
-        .content {
-            max-width: 640px;
+        /* ---- BLOG INDEX ---- */
+        .blog-header {
+            max-width: 720px;
             margin: 0 auto;
-            padding: 140px 24px 120px;
+            padding: 180px 24px 80px;
         }
 
-        .content h1 {
+        .blog-eyebrow {
             font-family: 'DM Sans', sans-serif;
             font-weight: 500;
-            font-size: 32px;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-        }
-
-        .content .subtitle {
-            font-size: 15px;
-            line-height: 1.7;
+            font-size: 13px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
             color: var(--text-secondary);
-            margin-bottom: 48px;
-        }
-
-        .form-group {
             margin-bottom: 24px;
         }
 
-        .form-group label {
-            display: block;
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin-bottom: 8px;
-            letter-spacing: 0.02em;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px 16px;
-            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 15px;
+        .blog-title {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: clamp(40px, 5vw, 64px);
+            line-height: 1.15;
             color: var(--text-primary);
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-secondary);
-            border-radius: 8px;
-            outline: none;
-            transition: border-color 0.2s;
+            margin-bottom: 24px;
         }
 
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: var(--text-tertiary);
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: var(--accent-primary);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 160px;
+        .blog-subtitle {
+            font-size: 18px;
             line-height: 1.6;
+            color: var(--text-secondary);
+            max-width: 560px;
         }
 
-        .submit-btn {
-            display: inline-block;
-            padding: 14px 32px;
-            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 15px;
+        .post-list {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px 160px;
+            list-style: none;
+        }
+
+        .post-item {
+            padding: 40px 0;
+            border-top: 1px solid var(--border-primary);
+        }
+
+        .post-item:last-child {
+            border-bottom: 1px solid var(--border-primary);
+        }
+
+        .post-link {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 32px;
+            align-items: baseline;
+            color: inherit;
+        }
+
+        .post-link:hover {
+            color: inherit;
+        }
+
+        .post-link:hover .post-headline {
+            color: var(--accent-primary);
+        }
+
+        .post-meta {
+            font-size: 13px;
+            letter-spacing: 0.04em;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
             font-weight: 500;
+            padding-top: 6px;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .post-headline {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 1.3;
             color: var(--text-primary);
-            background-color: var(--accent-primary);
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            letter-spacing: 0.02em;
-            transition: opacity 0.2s;
+            transition: color 120ms ease;
         }
 
-        .submit-btn:hover {
-            opacity: 0.85;
+        .post-excerpt {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-secondary);
         }
 
+        .post-readtime {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            letter-spacing: 0.04em;
+        }
+
+        /* ---- FOOTER ---- */
         .footer {
             padding: 80px 24px;
             text-align: center;
@@ -190,6 +220,7 @@
             justify-content: center;
             gap: 24px;
             margin-bottom: 16px;
+            flex-wrap: wrap;
         }
 
         .footer-links a {
@@ -215,12 +246,25 @@
                 gap: 20px;
             }
 
-            .content {
-                padding: 120px 24px 80px;
+            .blog-header {
+                padding: 140px 24px 64px;
             }
 
-            .content h1 {
-                font-size: 26px;
+            .post-list {
+                padding: 0 24px 100px;
+            }
+
+            .post-link {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .post-meta {
+                padding-top: 0;
+            }
+
+            .post-headline {
+                font-size: 24px;
             }
         }
     </style>
@@ -236,26 +280,24 @@
         </div>
     </nav>
 
-    <main class="content">
-        <h1>Support</h1>
-        <p class="subtitle">Have a question, found a bug, or just want to say hello? Fill out the form below and we'll get back to you.</p>
+    <header class="blog-header">
+        <p class="blog-eyebrow">Writing</p>
+        <h1 class="blog-title">Notes on the practice.</h1>
+        <p class="blog-subtitle">Essays on Stoic philosophy, daily practice, and the work of living well. Published weekly.</p>
+    </header>
 
-        <form id="support-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send message</button>
-        </form>
-    </main>
+    <ul class="post-list">
+        <li class="post-item">
+            <a class="post-link" href="/blog/how-to-build-a-daily-stoic-practice.html">
+                <time class="post-meta" datetime="2026-05-03">May 3, 2026</time>
+                <div class="post-body">
+                    <h2 class="post-headline">How to build a daily Stoic practice in 5 minutes</h2>
+                    <p class="post-excerpt">Marcus Aurelius ran the Roman Empire and still found time to journal every evening. He didn&rsquo;t have more time than you do. He had a system.</p>
+                    <span class="post-readtime">5 min read</span>
+                </div>
+            </a>
+        </li>
+    </ul>
 
     <footer class="footer">
         <p class="footer-location">Built in Melbourne, Australia</p>
@@ -270,18 +312,6 @@
         </div>
         <p class="footer-copy">&copy; 2026 Lars Holmstr&ouml;m</p>
     </footer>
-
-    <script>
-        document.getElementById('support-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var message = document.getElementById('message').value;
-            var subject = encodeURIComponent('Support request from ' + name);
-            var body = encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message);
-            window.location.href = 'mailto:hello@getvirtus.app?subject=' + subject + '&body=' + body;
-        });
-    </script>
 
 </body>
 </html>

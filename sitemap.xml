@@ -2,17 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://getvirtus.app/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-04</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://getvirtus.app/privacy</loc>
+    <loc>https://getvirtus.app/blog/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://getvirtus.app/blog/how-to-build-a-daily-stoic-practice.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getvirtus.app/support.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://getvirtus.app/privacy.html</loc>
     <lastmod>2026-03-27</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://getvirtus.app/terms</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://getvirtus.app/tou.html</loc>
+    <lastmod>2026-05-04</lastmod>
     <priority>0.5</priority>
   </url>
 </urlset>
