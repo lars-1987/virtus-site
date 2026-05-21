@@ -7,8 +7,13 @@
   </url>
   <url>
     <loc>https://getvirtus.app/blog/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://getvirtus.app/blog/senecas-letters-7-lessons.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://getvirtus.app/blog/how-to-build-a-daily-stoic-practice.html</loc>
